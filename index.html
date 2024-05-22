@@ -174,7 +174,8 @@
               </h1>
             </div>
             <div class="px-6 flex flex-col gap-4 cert-record">
-              <div *ngFor="let cert of cv.certs!">
+              <!-- <div>{{ data }}</div> -->
+              <!-- <div *ngFor="let cert of cv.certs!">
                 <h4 class="m-0 text-[16px] font-Inter font-bold">
                   {{ cert.cert_name }}
                 </h4>
@@ -182,8 +183,8 @@
                 <p class="m-0 mt-1 text-[14px] font-Inter font-bold">
                   {{ cert.cert_corporation }}
                 </p>
-                <!-- <p class="m-0 text-[12px] font-Inter">{{ cert.accomplished_date | date:'yyyy' }}</p> -->
-              </div>
+              </div> -->
+              {{ certRecord }}
             </div>
           </div>
 
@@ -202,7 +203,7 @@
             <div
               class="flex justify-start items-start flex-col px-6 gap-4 exp-record"
             >
-              <div
+              <!-- <div
                 *ngFor="let spec of cv.spec!"
                 class="flex justify-between items-center gap-4"
               >
@@ -210,7 +211,8 @@
                 <p class="m-0 text-[15px] font-Inter font-bold">
                   {{ spec.expertise_name | uppercase }}
                 </p>
-              </div>
+              </div> -->
+              {{ expRecord }}
             </div>
           </div>
         </div>
@@ -221,30 +223,15 @@
             EDUCATIONAL ATTAINMENT
           </h1>
           <div class="ps-[0.5in] flex flex-col gap-4 pe-10 record">
-            <div *ngFor="let educ of cv.educ!" class="">
+            <!-- <div *ngFor="let educ of cv.educ!" class="">
               <p class="m-0 font-Inter font-bold">{{ educ.educ_title }}</p>
               <p class="m-0">{{ educ.educ_school }}</p>
               <p class="m-0 italic">
                 {{ educ.year_start | date : "MMM - y" }} {{ educ.year_end | date
                 : "MMM - y" }}
               </p>
-            </div>
-            <div *ngFor="let educ of cv.educ!" class="">
-              <p class="m-0 font-Inter font-bold">{{ educ.educ_title }}</p>
-              <p class="m-0">{{ educ.educ_school }}</p>
-              <p class="m-0 italic">
-                {{ educ.year_start | date : "MMM - y" }} {{ educ.year_end | date
-                : "MMM - y" }}
-              </p>
-            </div>
-            <div *ngFor="let educ of cv.educ!" class="">
-              <p class="m-0 font-Inter font-bold">{{ educ.educ_title }}</p>
-              <p class="m-0">{{ educ.educ_school }}</p>
-              <p class="m-0 italic">
-                {{ educ.year_start | date : "MMM - y" }} {{ educ.year_end | date
-                : "MMM - y" }}
-              </p>
-            </div>
+            </div> -->
+            <div>{{ educRecord }}</div>
           </div>
         </div>
         <div class="industry-container">
@@ -252,7 +239,7 @@
             INDUSTRY EXPERIENCE
           </h1>
           <div class="ps-[0.5in] flex flex-col gap-4 pe-10 record">
-            <div *ngFor="let exp of cv.exp!" class="">
+            <!-- <div *ngFor="let exp of cv.exp!" class="">
               <h4 class="m-0 font-Inter font-bold">
                 {{ exp.experience_title }}
               </h4>
@@ -264,26 +251,28 @@
               <ul class="ml-5">
                 <li>{{ exp.experience_details }}</li>
               </ul>
-            </div>
+            </div> -->
+            {{ industryRecord }}
           </div>
         </div>
         <div class="course-container">
           <h1 class="text-[24px] font-bold tracking-[0.15em] m-0">
             COURSES HANDLED
           </h1>
-          <div
+          <div class="record">{{ schedRecord }}</div>
+          <!-- <div
             *ngFor="let sched of filteredSchedules"
             class="ps-[0.5in] flex flex-col gap-2 pe-10 record"
           >
             <ul>
               <li class="my-2 m-0 font-bold"><a>{{sched}}</a></li>
             </ul>
-          </div>
+          </div> -->
         </div>
         <div class="project-container">
           <h1 class="text-[24px] font-bold tracking-[0.15em] m-0">PROJECTS</h1>
           <div class="ps-[0.5in] flex flex-col gap-4 pe-10 record">
-            <div *ngFor="let proj of cv.project!">
+            <!-- <div *ngFor="let proj of cv.project!">
               <h4 class="m-0 font-Inter font-bold">{{ proj.project_name }}</h4>
               <p class="m-0 italic">
                 {{ proj.project_date | date : "MMM - y" }}
@@ -291,7 +280,8 @@
               <ul class="ml-5">
                 <li>{{ proj.project_detail }}</li>
               </ul>
-            </div>
+            </div> -->
+            {{ projRecord }}
           </div>
         </div>
       </div>
